@@ -41,14 +41,14 @@ span{
     background-color: yellow;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     max-height: 1200px;
 }
 .introContent{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 100vh;
+    height:auto;
     width: 100%;
     margin: auto;
     background: black;
@@ -121,7 +121,6 @@ span{
     margin-block: 0;
     width: auto;
 }
-
 .aboutBlock{
     z-index: 4;
     display: flex;
@@ -229,9 +228,9 @@ span{
         transform: translateX(138px) translateY(-416px) translateZ(-12px) rotateX(90deg) rotateY(0deg) rotateZ(335deg);
     }
 }
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:600px) 
 
-
+{
     *{
         min-width: 0;
         min-width: 0;
@@ -243,7 +242,7 @@ span{
     .introContent{
         margin: auto;
         flex-direction: column;
-        height: 100vh;
+        height: auto;
         width: 100%;
     }
     .logo{
@@ -256,23 +255,25 @@ span{
   
     .titles{
         width: 100%;
-        text-align: center;
+        text-align: left;
+        perspective: none;
+        height: auto;
     }
     .titles > h1{
-        transform-origin: top;
+        transform-origin: center;
         line-height: 75%;
+        margin: 0;
         font-size: 55vw;
-        transform: 
-        translateX(9%) translateY(-33%)  rotateX(2deg) rotateY(25deg) rotateZ(0deg);
+        transform: none;
     }
     .titles > h2{
-        font-size: 10vw;
+        font-size: 10vh;
         line-height: 80%;
         display: inline-block;
-        
-    font-family: 'Charis SIL', serif; 
-        transform: translateX(54px) translateY(-357px) translateZ(-15px)  rotateX(106deg) rotateY(354deg) rotateZ(335deg);
-        text-align: left;
+         font-family: 'Charis SIL', serif; 
+        transform: none;
+        text-align: center;
+        padding-top: -20%;
     }
     .aboutButton{
         margin: 0;
@@ -286,12 +287,14 @@ span{
         justify-content: center;
         max-height: none;
         height: auto;
-        padding-top: 120px;
     }
     .aboutTxt{
         margin-left: 0;
         margin-right: 0;
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+    .aboutImg{
+        display: none;
     }
     .details{
         border: none;
@@ -314,4 +317,9 @@ span{
     .introFooter{
         font-size: 13px;
     }
+
+
+
+
 }
+
