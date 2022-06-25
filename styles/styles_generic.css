@@ -1,0 +1,469 @@
+:root{
+    --mobileHeaderHeight: 60px;
+    --pcHeaderHeight: 120px;
+    --galleryBlockWidth: 60%;
+    --minGBWidth:40vw;
+    --maxGBwidth: 1400px;
+    --articleWidth: 60vw;
+    --artHeaderHeigt: 50px;
+    --minArticleHeight:400px;
+    --galleryMargPC: 15vw;
+}
+::selection{
+    color: yellowgreen;
+    background: purple;
+}
+body{
+    
+    font-family: 'Charis SIL', serif; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+         /*debug style*/
+    /* if you see this shit color 
+    it means style sheet is linked */
+    background:rgb(247, 29, 65);
+    border: none;
+    width: auto;
+    height: auto;
+}
+
+.copyright{
+    color: gray;
+    font-size: 10px;
+}
+
+div{
+    display: flex;
+    box-sizing: border-box;
+     /*debug style*/
+    color: white;
+}
+.secret{
+    
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    height:100%;
+    overflow: clip;
+
+}
+.rogueElement{
+    position: absolute;
+    width: 200px;
+    height: 500px;
+    margin-top: 500px;
+    /* adjust how impressed you want to be */
+    margin-left: 3000px;
+    color: black;
+    transform: skewx(30);
+    font-size: 30px;
+
+}
+a{
+    text-decoration: none;
+    color: red;
+}
+h1 h2 h3 p{
+    color: inherit;
+    padding: inherit;
+    margin: inherit;
+
+}
+h1{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-family: 'Staatliches', serif;
+}
+p{
+    font-size: 11px;
+}
+
+
+.container{
+    position:absolute;
+    flex-direction: column;
+    overflow: visible;
+}
+.isActive{
+    display: block;
+}
+.navigation{
+    z-index: 6;
+    flex-direction: column ;
+    position: fixed;
+    padding-top: 0;
+    width: 120px;
+     background-color: white;
+}
+.navLogo{
+    width: 120px;
+    height: 120px;
+    background: white;
+    background-image: url(../img/logo_placeholder.png);
+    background-size: 120px 120px;
+   
+}
+.openNav{
+    margin: 0;
+    width: 100%;
+
+}
+.navLink{
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+.navLink:hover{
+    width: 100%;
+    height: 100%;
+    color: black;
+
+}
+.navElements{
+    font-size: 14px;
+    height: 30px;
+    color: black;
+    padding: 0;
+    margin: 30px 0 0 0; 
+    border-top: none;
+    border-left: none;
+    border-right: 6px solid black;
+    border-bottom: 6px solid black;
+    background-color: white;
+    overflow-wrap: normal;
+   
+}
+.navElements:hover{
+    color: black;
+    border-bottom: none;
+    border-right: none;
+    border-top: 6px solid black;
+    border-left: 6px solid black;
+    background-color: white;
+}
+
+.navSelected{
+    font-size: 14px;
+    font-style: italic;
+    width: 280px;
+    height: 70px;
+    margin: 60px 0 -60px -20px;
+    transform:skew(339deg, 353deg) rotate(10deg) translate(-149px, -44px);
+    padding: 0;
+    padding: 0;
+    perspective: 320px;
+    overflow: hidden;
+    background-color: white;
+    
+}
+.navSelected>.navLink{
+    padding: 0;
+    font-size: 50px; 
+    transform: scaleX(.6) scaleY(1.4) translate(87px, 2px);
+    text-align: right;
+}
+
+
+.pageHeader{
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    text-align: left;
+    padding: 0 0 0 0;
+    margin: 0;
+    height: 120px;
+    /*debug style*/
+    background: black;
+    color: white;
+    position: fixed;
+    z-index: 5;
+    justify-content: right;
+}
+
+/* yellow */
+
+.content{
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 0 0 0;
+    margin-top: var(--pcHeaderHeight);
+    /* padding: 30px 0 0 10vw; */
+    min-height: 100vh;
+    background: yellow;
+}
+
+.subheader{
+    background: black;
+    z-index: 4;
+    width: calc(100%-var(--galleryMargPC));
+    margin-left: var(--galleryMargPC);
+    font-family: 'Staatliches', serif;
+    font-size: 30px;
+
+}
+.galleryBlock{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+     justify-content: flex-start; 
+    gap: 50px 40px;
+    background: white;
+    margin: 20px var(--galleryMargPC)  20px var(--galleryMargPC) ;
+    padding: none;
+    min-width: var(--minGBWidth);
+    max-width: var(--maxGBwidth);
+    perspective: 800px;
+    z-index: 4;
+}
+.galleryIndent{
+    margin-left: 10vw;
+}
+
+.article{
+    display: block;
+    width: var(--articleWidth);
+    transform-origin: center;
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 1000px;
+    overflow: hidden;
+}
+.straightImg{
+    transform: skewX(-10deg);
+}
+.headerText{
+    width: auto;
+    margin: auto;
+}
+.articleHeader{
+    margin: 0;
+    text-align: center;
+    margin-top: 6vh;
+    width: 100%;
+    height: var(--artHeaderHeigt);
+}
+.artcleEnd{
+    margin-top: 0px;
+}
+.artwork{
+    background:none;
+    margin: none;
+}
+.thumbnail{
+    width: 200px;
+    height: 200px;
+    flex-shrink: 0.5;
+    object-fit: cover;
+}
+.thumbnail:hover{
+    border: 5px solid black;
+    margin: -5px; 
+    overflow: visible;
+    transform-origin: bottom;
+    transform: rotateX(10deg);
+}
+.articleDisplay{
+    background-color: red;
+    padding: 10px 0 10px 0;
+    border-bottom: solid 3px black;
+}
+.imgDisplay{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.articleText{
+    color :purple;
+}
+.textBlock{
+    text-align: justify;
+    padding: 10px;
+}
+.inlineImg{
+    display: block;
+    width: auto;
+    float: right;
+}
+.wideImg{
+    max-width: 100%;
+    max-height: 100%; 
+    border-bottom:black 2px solid;
+}
+.viewport{
+    z-index: 7;
+    display: none;
+    border:none;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(0, 0, 0, .7);
+    backdrop-filter: blur(2px);
+}
+.artContainer{
+    height: 90vw;
+    max-height: 90%;
+    margin: auto;
+    text-align: center;
+}
+.fullImg{
+    display: inline-block;
+    place-items: center;
+    margin: auto;
+    height: clamp(300px, 70vw, 80%); 
+}
+.caption{
+    z-index: 8;
+    position: fixed;
+    display: block;
+    margin: 0;
+    padding: 0 0 8vh 0;
+    width: 100vw;
+    height: auto;
+    background: black;
+    color: white;
+    text-align: left;
+
+}
+.captionText{
+    display: block;
+    height: 100%;
+    margin: auto;
+    color: yellow;
+    font-size: 16px;
+
+}
+.footer{
+    border-top: solid black;
+    background:black;
+    color:white;
+    display: block;
+    text-align: right;
+    padding-right: 1vw;
+    line-height: 80%;
+}
+.footerText{
+    line-height: 70%;
+}
+.copyright{
+    font: 20pt;
+    font-family: 'Bitter', serif;
+    color: gray;
+    background-color: black;
+}
+
+@media only screen and (max-width:600px) {
+    .navigation{
+        display: block;
+        position: fixed;
+        margin-top: var(--mobileHeaderHeight);
+        height: auto;
+    }
+    .navLogo{
+        width: var(--mobileHeaderHeight);
+        height: var(--mobileHeaderHeight);
+        margin-top: calc(0px - var(--mobileHeaderHeight));
+    }
+    .openNav{
+        display: flex;
+    }
+    .navElements{
+        border:none;
+        margin: 0;
+        display: none;
+        height: 40px;
+        width: 190px;
+    }
+  
+    .navSelected{
+        border:none;
+        transform: none;
+        margin: 0;
+        height: calc(7vh + 6px);
+        overflow: hidden; 
+        text-align: left;
+        background-color: white;
+    }
+    .navElements:hover{
+        border:none;
+        overflow: hidden;
+        color: white;
+        background-color: black;
+    }   
+
+    .navLink{
+        font-size: 23px;
+    }
+    .navLink:hover{
+        color: white;
+    }
+    .navSelected > .navLink{
+        color: white;
+        width: 350px;
+        background-color: black;
+        float: left;
+        font-size: 30px;
+        transform-origin: center;
+        transform:skew(23deg, 356deg) 
+                  scale(0.7, 2.2);
+        padding: 16px 0 0 20px;
+        margin-left: -50px;
+    }
+    .navSelected > .navLink:hover{
+        background-color: white;
+        color:black;
+    }
+    
+    .pageHeader{
+        position: fixed;
+        height: var(--mobileHeaderHeight);
+        font-size: 20px;
+        padding-left: var(--mobileHeaderHeight) ;
+    }
+    .container{
+        margin: 0;
+        width: 100%;
+    }
+    .content{
+        padding-top: 0;
+    }
+    .galleryBlock{
+        perspective: none;
+        margin: 0 0 4vh 0;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        gap: 20px 20px;
+        min-width: 0;
+        width: 100%;
+
+    }
+    .thumbnail{       
+        width: 150px;
+        height: 150px;
+    }
+
+    .subheader{
+        margin: 0 0 1vh 0;
+        
+    }
+    .artContainer{
+     
+        height: 90vh;
+        max-height: 100vh;
+        
+    }
+    .viewport{
+        overflow: scroll;
+    }
+    .caption{
+        height: 10vh;
+        width: 100%;
+    }
+  
+  }

@@ -1,0 +1,317 @@
+:root{
+    --aboutHeight:60vh;
+    --navDimentions: 250px;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;   
+    flex-direction: column;
+    background-color: black;
+    font-family: 'Charis SIL', serif; 
+  
+}
+div{
+    display: flex;  
+    width: auto; 
+}
+h1 h2 h3 h4 p{
+    padding: 0;
+    margin: 0;
+    margin-block: 0;
+    width: auto;
+}
+a{
+    text-decoration: none;
+}
+h1{
+    font-family: 'Bebas Neue', cursive;
+}
+h2{
+    font-family: 'Charis SIL', serif; 
+}
+span{
+    margin: 0;
+    padding: 0;
+}
+.introBlock{
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-height: 1200px;
+}
+.introContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+    background: black;
+    
+}
+.logo{
+    height: 100%;
+}
+.titles{
+    width: 100%;
+    overflow: hidden;
+    perspective: 80vw;
+    perspective-origin: top;
+    display: block;
+    color: white;
+    max-width: 1000px;
+    min-height: 940px;
+}
+.titles >span{
+    margin-left: -20px;
+}
+
+.titles > h1{
+    transform-origin: top;
+    line-height: 75%;
+    font-size: 300px;
+    transform: 
+    translateX(15%) translateY(-30%)  rotateX(2deg) rotateY(25deg) rotateZ(0deg);
+}
+.titles > h2{
+    font-size: 60px;
+    line-height: 80%;
+    font-family: 'Bitter', serif; 
+    display: inline-block;
+    transform: translateX(120px) translateY(-347px) translateZ(-12px)  rotateX(90deg) rotateY(0deg) rotateZ(335deg);
+}
+.titles {
+   overflow: hidden;
+   display: inline-block;
+   background-color: black;
+}
+.aboutButton{
+    height: 40px;
+    font-size: 100px;
+    color: black;
+    background-color: white;
+    line-height: 120%;
+    display: inline-block;
+    height: auto;
+    text-align: center;
+    transform: translateX(0px) 
+    translateY(0px) 
+    rotateX(00deg)
+    rotateY(0deg)
+    rotateZ(00deg);
+    writing-mode: vertical-rl;
+    box-shadow: -4px -4px red;
+}
+.aboutButton:hover{
+    color: white;
+    background-color:black;
+    box-shadow: 4px 4px red;
+}
+.titleText{
+    perspective-origin: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.titleText > *{
+    margin-block: 0;
+    width: auto;
+}
+
+.aboutBlock{
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    height: 100vh;
+    justify-content: center;
+    
+}
+.aboutHeader{
+    font-size: 40px;
+   
+    line-height: 20%;
+    color: black;
+    height: auto;
+    justify-content: center;
+    background: white;
+    
+}
+.aboutBody{
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.aboutTxt{
+    height: auto;
+    width: 100%;
+    margin: 5vh 0 10vh 0;
+    min-height: 500px;
+   height: auto;
+   gap: 20px;
+    
+    flex-direction: row;
+}
+.aboutImg{
+    text-align: center;
+    margin: au;
+}
+.details{
+    flex-direction: column;
+    text-align: right;
+    justify-content: center;
+    color: white;
+    border-right: white 3px solid;
+    padding-right: 5px;
+}
+.details h1{
+    border-bottom:black solid 1px;
+    line-height: 70%;
+}
+.email{
+    font-size: 30px;
+    font-family: 'Charis SIL', serif;
+}
+.details p{
+    font-size: 20px;
+    border-bottom:black solid 1px;
+}
+.selectedWork{
+    width: 100%;
+    font-size: 30px;
+    color: black;
+    text-align: left;
+    background: white;
+    padding-right: -5px;
+}
+.selectedWork:hover{
+    color: white;
+    background: black;
+}
+.email{
+    font-size: 25px;
+    color: red;
+}
+.aboutImg{
+    width:  40vw;
+}
+.aboutHeader > h2{
+    margin-block: 0;
+}
+/* NAVIGATION */
+
+.introFooter{
+    margin: 0 40px 0 40px;
+    font: 18pt;
+    text-align: center;
+    font-family: 'Bitter', serif;
+    color: gray;
+    background-color: black;
+    border-top: 2px solid white;
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .titles > h1{
+        font-size: 360px;
+    }
+    .titles > h2{
+        transform: translateX(138px) translateY(-416px) translateZ(-12px) rotateX(90deg) rotateY(0deg) rotateZ(335deg);
+    }
+}
+@media only screen and (max-width:600px) {
+
+
+    *{
+        min-width: 0;
+        min-width: 0;
+    }
+    .introBlock{
+        height: auto;
+
+    }
+    .introContent{
+        margin: auto;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+    }
+    .logo{
+        width: 30%;
+        height: 30%;
+        margin: auto;
+        margin-top: 10vh;
+        margin-bottom: 3vh;
+    }
+  
+    .titles{
+        width: 100%;
+        text-align: center;
+    }
+    .titles > h1{
+        transform-origin: top;
+        line-height: 75%;
+        font-size: 55vw;
+        transform: 
+        translateX(9%) translateY(-33%)  rotateX(2deg) rotateY(25deg) rotateZ(0deg);
+    }
+    .titles > h2{
+        font-size: 10vw;
+        line-height: 80%;
+        display: inline-block;
+        
+    font-family: 'Charis SIL', serif; 
+        transform: translateX(54px) translateY(-357px) translateZ(-15px)  rotateX(106deg) rotateY(354deg) rotateZ(335deg);
+        text-align: left;
+    }
+    .aboutButton{
+        margin: 0;
+        display: flex;
+        writing-mode: horizontal-tb;
+        
+    }
+    .aboutBody{
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+        max-height: none;
+        height: auto;
+        padding-top: 120px;
+    }
+    .aboutTxt{
+        margin-left: 0;
+        margin-right: 0;
+        flex-direction: column-reverse;
+    }
+    .details{
+        border: none;
+        border-top: white 3px solid;
+    }
+    .details > h1{
+        text-align: center;
+    }
+    
+
+    .navBlock{
+        height: auto;
+        padding: 0;
+        justify-content: space-around;
+    }
+    .navBlockElement{
+        margin: 0;
+
+    }
+    .introFooter{
+        font-size: 13px;
+    }
+}
