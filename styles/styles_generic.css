@@ -101,9 +101,21 @@ p{
     width: 120px;
     height: 120px;
     background: white;
-    background-image: url(../img/logo_placeholder.png);
+    /* background-image: url(../img/logo_placeholder.png);
+     */
     background-size: 120px 120px;
    
+}
+.navLogo a{
+    font-size:150px;
+    line-height: 40px;
+    margin: 20px 5px 5px 5px;
+    color: black;
+    font-family: 'Rampart One', cursive;
+}
+
+.navLogo a:hover{
+    color: red;
 }
 .openNav{
     margin: 0;
@@ -369,6 +381,12 @@ p{
         width: var(--mobileHeaderHeight);
         height: var(--mobileHeaderHeight);
         margin-top: calc(0px - var(--mobileHeaderHeight));
+    }
+    .navLogo a{
+        font-size:80px;
+        line-height: 20px;
+        margin: 10px 2px 2px 2px;
+        font-family: 'Rampart One', cursive;
     }
     .openNav{
         display: flex;
