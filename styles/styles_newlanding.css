@@ -1,0 +1,204 @@
+:root{
+    --cardTopPadding:25px;
+}
+body{
+    background-color: black;
+}
+a{
+    text-decoration: solid 1px  rgba(0,0,0,0)underline;
+    transition: 0.2s;
+    
+}
+a:visited{
+    color: red;
+}
+a:hover{
+    text-decoration: wavy 2.5px black underline;
+    text-shadow: 0px 1px blue;
+}
+
+h1{
+    font-family: 'Staatliches-Regular', cursive;
+    font-size: 210px;
+    line-height: 130px;
+    letter-spacing: -8px;
+    color: white;
+    margin: 0;
+}
+.h2{
+    font-family: 'DM Serif Text', serif;
+    font-size: 70px;
+    letter-spacing: -2px ;
+    color: red;
+    margin: 0;
+}
+h3{
+    font-family: 'Cambria', 'Times New Roman', Times, serif;
+    font-size: 20px;
+    letter-spacing: -1px;
+    margin: 0;
+}
+.greeting{
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: -1px;
+}
+.red{
+    color: red;
+    margin-left: -3px;
+    letter-spacing: -6px;
+    font-size: 24px;
+    display: inline;
+}
+.black{
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+    display: inline;
+}
+
+p{
+    font-family: 'Source Code Pro', 'Courier New', monospace;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 14px;
+    margin-top: 6px;
+    width: 330px;
+}
+i{
+    font-family: 'Source Code Pro', 'Courier New', monospace;
+    font-weight: 700;
+    font-style: bold;
+}
+.email{
+    font-family: Cambria; 
+    font-size: 28px;
+    letter-spacing: -1px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 400;
+    color:#0047FF;
+}
+
+/* content */
+.header{
+    text-align: right;
+}
+.contentMain{
+    display: block;
+    width: clamp(780px, 100vw, 900px);
+    height: 600px;
+    margin: auto;
+    margin-top: 15vh;
+}
+
+.cardMain{
+    background-image: url(/img/introImg.PNG);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: 500px 400px;
+    padding-top: var(--cardTopPadding);
+    width: clamp(780px, 100vw, 900px);
+    height: 360px;
+}
+.textBox{
+    border-left: black 10px solid;
+    padding-right: 20px;
+    width: 70%;
+    height: 87%;
+    margin-left: 40px;
+    margin-top: 0px;
+    padding-left: 10px;
+}
+
+.contact{
+    line-height: 18px;
+    margin-top: 50px; 
+    margin-bottom: 10px;
+    z-index: 7;
+}
+.works{
+    font-family: 'DM Serif Text', serif;
+    font-size: 70px;
+    line-height: 72px;
+    letter-spacing: -2px ;
+    color: red;
+}
+
+
+@media only screen and (max-width:650px){
+
+    body{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .contentMain{
+        width: 100%;
+        flex-direction: column-reverse;
+        margin: 0;
+        height: 990px;
+    }
+
+    .cardMain{
+        margin: 0;
+        padding: 0px;
+        width: 100%;
+        min-height: 600px;
+        height: calc(100vh - 390px);
+        background-image: cen;
+    }
+
+    .textBox{
+        border: none;
+        min-width: 480px;
+        padding-top: 25px;
+        margin: auto;
+    }
+    p{
+        width: 200px;
+        padding-top: 15px;
+        font-size: 18px;
+        line-height: 16px;
+        text-shadow: 1px 1px  white;
+    }
+    .greeting{
+        font-size: 30px;
+        
+    }
+    .contact{
+        width: 150px;
+        line-height: 19px;
+        overflow-wrap: break-word;
+        margin-top: 10vh;
+    }
+    a:hover{
+        position: relative;
+        text-decoration: wavy 1px black underline;
+        left: 0px;
+    }
+    .works{
+        font-family: 'Oranienbaum', serif;
+        display: inline-block;
+        letter-spacing: -5px;
+        font-size: 79px;
+        white-space: nowrap;
+        width: 100%;
+        text-align: center;
+    
+        
+    }
+    .header{
+        color:white;
+        position: absolute;
+        text-align: center;
+        top: clamp(600px, calc(100vh - 390px), 1200px);
+        width: auto;
+        font-size: 280px;
+        line-height: 195px;
+        letter-spacing: -3px;
+    }
+    
+    
+}
