@@ -10,15 +10,15 @@ a{
     
 }
 a:visited{
-    color: red;
+    color: rgb(247, 29, 65);
 }
 a:hover{
     text-decoration: wavy 2.5px black underline;
-    text-shadow: 0px 1px blue;
+    /* text-shadow: 0px 1px blue; */
 }
 
 h1{
-    font-family: 'Staatliches-Regular', cursive;
+    font-family: 'Staatliches', cursive;
     font-size: 210px;
     line-height: 130px;
     letter-spacing: -8px;
@@ -29,7 +29,7 @@ h1{
     font-family: 'DM Serif Text', serif;
     font-size: 70px;
     letter-spacing: -2px ;
-    color: red;
+    color:rgb(247, 29, 65);
     margin: 0;
 }
 h3{
@@ -44,17 +44,16 @@ h3{
     letter-spacing: -1px;
 }
 .red{
-    color: red;
-    margin-left: -3px;
-    letter-spacing: -6px;
+    color: rgb(247, 29, 65);
+    margin-left: -2px;
+    letter-spacing: -2px;
     font-size: 24px;
     display: inline;
 }
-.black{
-    color: black;
-    font-size: 24px;
-    font-weight: 700;
-    display: inline;
+.at{
+    margin-left: 0px;
+    letter-spacing: -2px;
+    
 }
 
 p{
@@ -71,10 +70,11 @@ i{
     font-style: bold;
 }
 .email{
-    font-family: Cambria; 
+    font-family: 'Cambria', 'Times New Roman', Times, serif; 
     font-size: 28px;
     letter-spacing: -1px; 
     font-style: normal; 
+    /* this doesn't fucking work!!!!! */
     font-variant: normal; 
     font-weight: 400;
     color:#0047FF;
@@ -86,7 +86,8 @@ i{
 }
 .contentMain{
     display: block;
-    width: clamp(780px, 100vw, 900px);
+    /* width: clamp(780px, 100vw, 900px); */
+    width: 900px;
     height: 600px;
     margin: auto;
     margin-top: 15vh;
@@ -99,7 +100,8 @@ i{
     background-color: white;
     background-size: 500px 400px;
     padding-top: var(--cardTopPadding);
-    width: clamp(780px, 100vw, 900px);
+    /* width: clamp(780px, 100vw, 900px); */
+    width: 900px;
     height: 360px;
 }
 .textBox{
@@ -123,5 +125,12 @@ i{
     font-size: 70px;
     line-height: 72px;
     letter-spacing: -2px ;
-    color: red;
+    white-space: nowrap; 
+    color: rgb(247, 29, 65);
+}
+
+@media only screen and (max-width:600px) {
+    body{
+        transform: rotate(90deg);
+    }
 }

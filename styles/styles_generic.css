@@ -15,15 +15,17 @@
 }
 body{
     
-    font-family: 'Charis SIL', serif; 
+    /* font-family: 'Charis SIL', serif;  */
+    font-family: 'Source Code Pro', 'Courier New', monospace;
+    font-weight: 500;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: row;
-         /*debug style*/
-    /* if you see this shit color 
-    it means style sheet is linked */
-    background:rgb(247, 29, 65);
+    
+    /* background:rgb(247, 29, 65); */
+    background: black;
+
     border: none;
     width: auto;
     height: auto;
@@ -63,7 +65,8 @@ div{
 }
 a{
     text-decoration: none;
-    color: red;
+    /* color: red; */
+    color: rgb(247, 29, 65);
 }
 h1 h2 h3 p{
     color: inherit;
@@ -112,6 +115,7 @@ p{
     margin: 20px 5px 5px 5px;
     color: black;
     font-family: 'Rampart One', cursive;
+    transition: 0.2s;
 }
 
 .navLogo a:hover{
@@ -180,12 +184,14 @@ p{
 
 .pageHeader{
     width: 100%;
+    min-width:750px;
     height: 100%;
     font-size: 50px;
     text-align: left;
     padding: 0 0 0 0;
     margin: 0;
     height: 120px;
+    white-space: nowrap;
     /*debug style*/
     background: black;
     color: white;
@@ -203,11 +209,11 @@ p{
     margin-top: var(--pcHeaderHeight);
     /* padding: 30px 0 0 10vw; */
     min-height: 100vh;
-    background: yellow;
+    /* background: yellow; */
 }
 
 .subheader{
-    background: black;
+    background: rgb(247, 29, 65);
     z-index: 4;
     width: calc(100%-var(--galleryMargPC));
     margin-left: var(--galleryMargPC);
@@ -344,6 +350,8 @@ p{
 
 }
 .captionText{
+    font-family: 'Source Code Pro', 'Courier New', monospace;
+    font-weight: 500;
     display: block;
     height: 100%;
     margin: auto;
@@ -352,22 +360,46 @@ p{
 
 }
 .footer{
-    border-top: solid black;
+   
+    border-top: solid white 3px;
     background:black;
     color:white;
     display: block;
     text-align: right;
     padding-right: 1vw;
-    line-height: 80%;
+    line-height: .8;
+
 }
-.footerText{
-    line-height: 70%;
+
+.footer>h3{
+    font-family: 'Cambria', 'Times New Roman', Times, serif;
+    font-size: 18px;
+    
+    margin: 0;
+}
+.footer>a{
+    font-family: 'Cambria', 'Times New Roman', Times, serif; 
+    font-size: 25px;
+    font-style: normal; 
+    font-variant: normal; 
+    color:rgb(247, 29, 65);
+}
+.footer>a:hover{
+    text-decoration: wavy white 2px underline;
+    transition: 0.2s;
+}
+.white{
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+    margin: 0;
 }
 .copyright{
-    font: 20pt;
-    font-family: 'Bitter', serif;
-    color: gray;
+    font-size: 12px;
+    color: rgb(77, 77, 77);
+    margin-top: 30px;
     background-color: black;
+    letter-spacing: -1;
 }
 
 @media only screen and (max-width:600px) {
@@ -385,8 +417,9 @@ p{
     .navLogo a{
         font-size:80px;
         line-height: 20px;
-        margin: 10px 2px 2px 2px;
+        margin: 8px 2px 2px 2px;
         font-family: 'Rampart One', cursive;
+        
     }
     .openNav{
         display: flex;
@@ -441,7 +474,9 @@ p{
     .pageHeader{
         position: fixed;
         height: var(--mobileHeaderHeight);
-        font-size: 20px;
+        font-size: 24px;
+        
+        min-width:0;    
         padding-left: var(--mobileHeaderHeight) ;
     }
     .container{
@@ -450,6 +485,7 @@ p{
     }
     .content{
         padding-top: 0;
+        margin-top: 100px;
     }
     .galleryBlock{
         perspective: none;
@@ -465,9 +501,15 @@ p{
         width: 150px;
         height: 150px;
     }
+    .thumbnail:hover{
+        border: 3px solid black;
+        margin: -3px; 
+        transform: none;
+        transition: none;
+    }
 
     .subheader{
-        margin: 0 0 1vh 0;
+        margin:0;
         
     }
     .artContainer{
