@@ -225,9 +225,10 @@ p{
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
-     justify-content: flex-start; 
+    justify-content: flex-start; 
     gap: 50px 40px;
-    background: white;
+    /* background: white; */
+    background: none;
     margin: 20px var(--galleryMargPC)  20px var(--galleryMargPC) ;
     padding: none;
     min-width: var(--minGBWidth);
@@ -277,11 +278,12 @@ p{
     object-fit: cover;
 }
 .thumbnail:hover{
-    border: 5px solid black;
+    border: 3px solid rgb(247, 29, 65);
+    box-sizing: border-box;
     margin: -5px; 
-    overflow: visible;
-    transform-origin: bottom;
-    transform: rotateX(10deg);
+    overflow: hidden;
+    /* transform-origin: bottom; */
+    /* transform: rotateX(10deg); */
 }
 .articleDisplay{
     background-color: red;
@@ -344,19 +346,19 @@ p{
     padding: 0 0 8vh 0;
     width: 100vw;
     height: auto;
-    background: black;
+    background: none;
     color: white;
-    text-align: left;
+    text-align: center;
 
 }
 .captionText{
-    font-family: 'Source Code Pro', 'Courier New', monospace;
+    font-family: 'Cambria', 'Times New Roman', Times, serif;
     font-weight: 500;
     display: block;
     height: 100%;
     margin: auto;
     color: yellow;
-    font-size: 16px;
+    font-size: 20px;
 
 }
 .footer{
