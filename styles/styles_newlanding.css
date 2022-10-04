@@ -133,4 +133,9 @@ i{
     body{
         transform: rotate(90deg);
     }
+
+    .contentMain{
+        margin-top: 10px;
+    }
+    .cardMain{}
 }
